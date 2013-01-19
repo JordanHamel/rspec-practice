@@ -14,7 +14,8 @@ describe "#fibonacci" do
   it "returns several fib numbers" do
     fibs_rec(5).should == [0, 1, 1, 2, 3]
   end
-
+  
+  # good test, ensuring recursiveness. 
   it "calls itself recursively" do
     should_receive(:fibs_rec).at_least(:twice).and_call_original
     fibs_rec(5)
